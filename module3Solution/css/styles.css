@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-family: "Times New Roman", Georgia, Serif;
+ }
+
+ h1 {
+    font-size: 1.75em;
+}
+
+section {
+    background-color: #999999;
+    border: 1px solid #000000;
+    margin: 0 auto 25px ;
+    padding: 0;
+}
+
+section p {
+    padding: 0 6px 4px 6px;
+}
