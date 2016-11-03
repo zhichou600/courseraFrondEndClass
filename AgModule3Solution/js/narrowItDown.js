@@ -47,7 +47,7 @@ function NarrowItDownController(MenuCategoriesService) {
 
   menu.search = function () {
     menu.checkResult = false;
-    var searchTerm = menu.searchTerm.toLowerCase();
+    var searchTerm = menu.searchTerm;
     if(searchTerm == null) {
       menu.checkResult = true;
       return;
@@ -85,8 +85,8 @@ function MenuCategoriesService($http, ApiBasePath) {
        var foundItems = [];
        for(var i=0; i<list.length;i++){
            var item = list[i];
-           if(item.description.toLowerCase().indexOf(searchTerm) !== -1
-            || item.name.toLowerCase().indexOf(searchTerm) !== -1){
+           if(item.description.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1
+            || item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1){
              foundItems.push(item);
            }
        }
